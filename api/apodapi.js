@@ -1,17 +1,10 @@
-let api_key ='Y1NJVaV0VWcI9AnYNkcmTMdhLpcWMwlRjqpbIyW3';
-let endpoint = '/planetary/apod/';
+let heroEndPoint = '/planetary/apod/';
 
 $.ajax({
-    url:'https://api.nasa.gov'+endpoint+'?api_key='+api_key,
-    success:function(nasadata){
-        //seção de importações dos comandos
-        // url -> caminho da imagem
-        // copyright -> direitos autorais da imagem
-        // explanation -> explicação da imagem
-        // date -> data da foto
-        // hdurl -> foto em alta resolução
-        // media_type -> tipo do arquivo
-        // service_version -> versão do serviço
-        // title -> nome da foto
+    url:'https://api.nasa.gov'+heroEndPoint+'?api_key='+api_key,
+    success:function(herodata){
+        document.querySelector('#featured-img').innerHTML="<img src='"+herodata.url+"' alt='"+herodata.copyright+"' title='"+herodata.title+"' />";
+        document.querySelector('.featured-title').innerHTML= herodata.title;
+        document.querySelector('.featured-description').innerHTML = herodata.explanation;
     }
 })
