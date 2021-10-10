@@ -1,0 +1,213 @@
+@import url("../css/default.css");
+@import url("../css/components.css");
+
+body{background:#0a0a0a url("../img/footer-background.jpg") no-repeat center bottom -300px;}
+
+/* HERO NASA */
+#heroNasa{padding:25px 25px 50px 25px;background:url("../img/universe-background-img.png") no-repeat center bottom;background-size:225%;}
+#heroNasa main{z-index:2;position:relative;}
+#heroNasa #logo-nasa{
+    width:100%;
+    margin-bottom:30px;
+}
+
+#heroNasa .description-hero{width:42%;}
+#heroNasa .hero-preview-image{width:55%;}
+
+#heroNasa .hero-preview-image{
+    margin-top:-105px;
+    max-height:450px;
+    overflow: hidden;
+    display:flex;
+    align-items: center;
+    border-radius:10px;
+}
+
+#heroNasa .description-hero{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+}
+#heroNasa .description-hero div{
+    padding:30px;
+    border-radius:10px;
+    margin-top:-100px;
+}
+#heroNasa .description-hero h1{
+    width:100%;
+    color:#fff;
+    font-size:35px;
+    font-weight:bold;
+    position:relative;
+    line-height:100%;
+    margin-bottom:45px;
+}
+#heroNasa .description-hero h1:after{
+    content:'';
+    position:absolute;
+    bottom:-15px;
+    left:0px;
+    height:2px;
+    width:25%;
+    background:#fff;
+}
+#heroNasa .description-hero span{
+    display:flex;
+    width:100%;
+    margin-bottom:25px;
+    color:#fff;
+    font-size:16px;
+}
+#heroNasa .description-hero a{
+    border:1px solid #fff;
+    padding:8px 25px;
+    border-radius:50px;
+    color:#fff;
+    margin-top:35px;
+}
+#heroNasa .description-hero a:hover{
+    background:#fff;
+    color:#000017;
+}
+
+@media screen and (max-width:800px){
+    #heroNasa #logo-nasa{
+        justify-content: center;
+        display:flex;
+        text-align:center;
+    }
+    #heroNasa .description-hero,
+    #heroNasa .hero-preview-image{
+        width:100%;
+    }
+    #heroNasa .hero-preview-image{order:1;margin-top:0px;}
+    #heroNasa .description-hero{
+        order:2;
+        background:rgba(0,0,0,0.7);
+        margin-top:-175px;
+        display:block;
+    }
+    #heroNasa .description-hero div{
+        margin-top:0px;
+    }
+    #heroNasa .description-hero h1{font-size:20px;margin-bottom:25px;}
+    #heroNasa .description-hero span{font-size:13px;}
+}
+
+
+/* MARS GALLERY */
+#marsGallery{
+    position:relative;
+    z-index:1;
+    margin-top:-85px;
+    padding:120px 25px 50px 25px; 
+    background:url("https://www.nasa.gov/sites/all/themes/custom/nasatwo/images/starfield-banner.jpg") repeat center center;
+    border-radius:15px 15px 0px 0px;
+}
+#marsGallery h1{
+    display:flex;
+    justify-content: center;
+    font-size:40px;
+    font-weight:bold;
+    color:#fff;
+}
+#marsGallery span{
+    text-align:center;
+    color:#999;
+    font-size:15px;
+}
+
+#gallerySlider{
+    margin-top:30px;
+    margin-bottom:50px;
+}
+#gallerySlider .swiper-slide{
+    border-radius:15px;
+    min-height:250px;
+    overflow: hidden;
+}
+
+@media screen and (max-width:800px){
+    #marsGallery h1{
+        font-size:22px;
+    }
+
+}
+
+
+
+/* Near Objects */
+#asteroidsNear{
+    padding:100px 25px;
+}
+#asteroidsNear h1{
+    display:flex;
+    justify-content: center;
+    font-size:40px;
+    font-weight:bold;
+    color:#fff;
+}
+#asteroidsNear span{
+    text-align:center;
+    color:#999;
+    font-size:15px;
+}
+
+#asteroidsNear .objects-list-grid{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    grid-gap:10px;
+}
+#asteroidsNear .objects-list-grid article{
+    width:100%;
+    height:150px;
+    border-radius:10px;
+    background:#151515;
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    justify-content: center;
+
+    transition-duration:0.2s;
+}
+#asteroidsNear .objects-list-grid article:hover{
+    background:#191919;
+}
+#asteroidsNear .objects-list-grid article h6,
+#asteroidsNear .objects-list-grid article p{
+    color:#fff;
+}
+
+
+@media screen and (max-width:800px){
+    #asteroidsNear{
+        padding-top:50px;
+    }
+    #asteroidsNear h1{
+        font-size:22px;
+    }
+
+    #asteroidsNear .objects-list-grid{
+        grid-template-columns:repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width:450px){
+    #asteroidsNear .objects-list-grid{
+        grid-template-columns:repeat(1, 1fr);
+    }
+}
+
+
+/* RODAPÉ NASA */
+footer main{
+    border-radius:20px;
+    padding:25px 25px;
+}
+footer main span{
+    margin-top:20px;
+    font-size:14px;
+    color:#fff;
+    text-align:center;
+}
