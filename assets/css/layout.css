@@ -97,6 +97,12 @@ body{background:#0a0a0a url("../img/astronaut-space-13-4k.jpg") no-repeat center
     #heroNasa .description-hero span{font-size:13px;}
 }
 
+@media screen and (max-width:400px){
+    #heroNasa .hero-preview-image{
+         max-height:190px;
+    }
+}
+
 
 /* MARS GALLERY */
 #marsGallery{
@@ -138,7 +144,11 @@ body{background:#0a0a0a url("../img/astronaut-space-13-4k.jpg") no-repeat center
     #marsGallery h1{
         font-size:22px;
     }
-
+}
+@media screen and (max-width:400px){
+    #marsGallery{
+        padding-top:50px;
+    }
 }
 
 
@@ -194,6 +204,7 @@ body{background:#0a0a0a url("../img/astronaut-space-13-4k.jpg") no-repeat center
 @media screen and (max-width:800px){
     #asteroidsNear{
         padding-top:50px;
+        padding-bottom:40px;
     }
     #asteroidsNear h1{
         font-size:22px;
