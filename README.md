@@ -1,3 +1,8 @@
-Página simples consumindo API da Nasa para fins de testes.
+# NASA SCIENCE API
 
-Tecnologias utilizadas: Docker (ambiente) + Javascript
+### Objetivo
+Consumir via API informações da Nasa.
+
+### Tecnologias
+-[x] HTML + CSS + JAVASCRIPT para desenvolvimento
+-[x] Docker para carregar ambiente de desenvolvimento
