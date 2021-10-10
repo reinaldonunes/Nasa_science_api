@@ -1,4 +1,3 @@
-// imporando Imagem Astronômica do Dia
 let baseUrl = 'https://api.nasa.gov';
 let api_key ='Y1NJVaV0VWcI9AnYNkcmTMdhLpcWMwlRjqpbIyW3';
 
@@ -9,7 +8,6 @@ document.body.appendChild(heroimage);
 var marsgallery = document.createElement('script');
 marsgallery.src = 'api/marsgalleryapi.js';
 document.body.appendChild(marsgallery);
-
 
 var asteroids = document.createElement('script');
 asteroids.src = 'api/asteroidapi.js';

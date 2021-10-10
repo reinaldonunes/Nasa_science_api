@@ -28,7 +28,6 @@ function showDaily(jsonObject){
         imgDaily.width = '100%';
         heroSectionMedia.appendChild(imgDaily);
     }
-   
 
     var titleDaily = document.createElement('h1');
     titleDaily.textContent = jsonObject['title'];
@@ -38,7 +37,6 @@ function showDaily(jsonObject){
     authorDaily.textContent = "Author: "+jsonObject['copyright'];
     heroSectionContent.appendChild(authorDaily);
 
-    
     var dateDaily = document.createElement('span');
     dateDaily.textContent = "Date: "+jsonObject['date'];
     heroSectionContent.appendChild(dateDaily);   

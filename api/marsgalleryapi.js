@@ -1,7 +1,6 @@
 var marsSection = document.querySelector("#gallerySlider .swiper-wrapper");
 let marsRequest = '/mars-photos/api/v1/rovers/curiosity/photos?sol=1000';
 
-
 // start api
 var requestMarsURL = baseUrl+marsRequest+'&api_key='+api_key;
 var requestMars = new XMLHttpRequest();

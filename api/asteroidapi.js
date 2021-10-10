@@ -1,7 +1,6 @@
 var asteroidSection = document.querySelector(".objects-list-grid");
 let asteroidRequest = '/neo/rest/v1/feed?start_date=2021-10-08&end_date=2021-10-11';
 
-
 // start api
 var requestObjectsURL = baseUrl+asteroidRequest+'&api_key='+api_key;
 var requestObjects = new XMLHttpRequest();
@@ -37,20 +36,5 @@ function showAsteroids(jsonObject2){
         var amountAsteroid = document.createElement('span');
         amountAsteroid.innerHTML = amount + ' objects';
         articleAsteroid.appendChild(amountAsteroid);
-    
-        /*
-        for(i = 0; i < near_objects_list[k].length; i++) {
-        
-            var amountAsteroid = document.createElement('span');
-        amountAsteroid.innerHTML = 'Amount: '+amount;
-        articleAsteroid.appendChild(amountAsteroid);
-
-        console.log(near_objects_list[k].length);
-        //var photoAsteroid = document.createElement('img');
-        // photoAsteroid.src = near_objects_list[k][i].nasa_jpl_url;
-        //asteroidSection.appendChild(photoAsteroid);
-        //console.log(near_objects_list[k][i]);
-        }
-        */
     }
 }
