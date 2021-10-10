@@ -2,14 +2,14 @@ var heroSection = document.querySelector("#featured-section main");
 let heroPointRequest = '/planetary/apod/';
 
 // start api
-var requestURL = baseUrl+heroPointRequest+'?api_key='+api_key;
-var request = new XMLHttpRequest();
-request.open('GET',requestURL);
-request.responseType = 'json';
-request.send();
+var requestHeroURL = baseUrl+heroPointRequest+'?api_key='+api_key;
+var requestHero = new XMLHttpRequest();
+requestHero.open('GET',requestHeroURL);
+requestHero.responseType = 'json';
+requestHero.send();
 
-request.onload = function(){
-    var dailyContent = request.response;
+requestHero.onload = function(){
+    var dailyContent = requestHero.response;
     showDaily(dailyContent);
 }
 
