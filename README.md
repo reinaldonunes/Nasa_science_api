@@ -4,5 +4,7 @@
 Consumir via API informações da Nasa.
 
 ### Tecnologias
--[x] HTML + CSS + JAVASCRIPT para desenvolvimento
--[x] Docker para carregar ambiente de desenvolvimento
+HTML, CSS e Javascript (API Request)
+
+### Captura de Tela
+![Screenshot do projeto](https://ibb.co/VqZyf3x)

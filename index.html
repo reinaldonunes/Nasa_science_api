@@ -10,6 +10,7 @@
         <meta name="description" content="NASA API page desenvolvida com o propósito de consumir api da Nasa.">
         <meta name="keywords" content="nasa,api,javascript,mars,space">
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
         <link rel="stylesheet" href="assets/css/layout.css">
         <title> NASA - API</title>
     </head>
@@ -21,16 +22,10 @@
                 </div>
 
                 <section class="description-hero">
-                    <div class="description-content">
-                        <h1>Full Moon Silhouettes</h1>
-                        <span>descrição - autor - algo</span>
-                        <a href="">+ More info</a>
-                    </div>
+                    <div class="description-content"></div>
                 </section>
 
-                <section class="hero-preview-image">
-                    <img src="https://s2.glbimg.com/QLxoyvSYcrv_CZcM0sqezpXwApY=/e.glbimg.com/og/ed/f/original/2020/04/24/nasce_uma_estrela_credito-nasa_esa_and_m._livio_and_the_hubble_20th_anniversary_team_stsci.jpg" alt="" title="" />
-                </section>
+                <section class="hero-preview-image"></section>
             </main>
         </section>
 
@@ -40,16 +35,7 @@
                 <span>Check out the best photos taken from the surface of mars. </span>
             
                 <div class="swiper" id="gallerySlider">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">Slide 1</div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
-                        <div class="swiper-slide">Slide 4</div>
-                        <div class="swiper-slide">Slide 5</div>
-                        <!-- End slides -->
-                    </div>
+                    <div class="swiper-wrapper"></div>
                 </div>
             </main>
         </section>
@@ -57,30 +43,8 @@
         <section id="asteroidsNear">
             <main class="flex flexColumn">
                 <h1>Near Earth Objects</h1>
-                <span>Check out the best photos taken from the surface of mars. </span>
-
-                <div class="objects-list-grid">
-                    <article>
-                        <h6>Data do objeto</h6>
-                        <p>outras info</p>
-                    </article>
-                    <article>
-                        <h6>Data do objeto</h6>
-                        <p>outras info</p>
-                    </article>
-                    <article>
-                        <h6>Data do objeto</h6>
-                        <p>outras info</p>
-                    </article>
-                    <article>
-                        <h6>Data do objeto</h6>
-                        <p>outras info</p>
-                    </article>
-                    <article>
-                        <h6>Data do objeto</h6>
-                        <p>outras info</p>
-                    </article>
-                </div>
+                <span>See how many objects are close to Earth on these dates: </span>
+                <div class="objects-list-grid"></div>
             </main>
         </section>
 
@@ -90,49 +54,37 @@
                <span>National Aeronautics and Space Administration<br />NASA Official: Brian Dunbar</span>
             </main>
         </footer>
-
-
-
-
-
-
-
-       <section id="featured-section"><main></main></section>
-       
-       <div id="asteroid-section"><main></main></div>
-
-       <div id="mars-section"><main></main></div>
+        
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="api/apiconfig.js"></script>
+        <script>
+            var swiper = new Swiper("#gallerySlider", {
+                slidesPerView: 4,
+                spaceBetween: 30,
+                freeMode: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    750: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                    },
+                    599: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    380: {
+                        slidesPerView: 1,
+                        spaceBetween:0,
+                    },
+                    340: {
+                        slidesPerView: 1,
+                    },
+                },
+            });
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     </body>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper("#gallerySlider", {
-            slidesPerView: 4,
-            spaceBetween: 30,
-            freeMode: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            breakpoints: {
-                750: {
-                    slidesPerView: 3,
-                    spaceBetween: 20,
-                },
-                599: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                },
-                380: {
-                    slidesPerView: 1,
-                    spaceBetween:0,
-                },
-                340: {
-                    slidesPerView: 1,
-                },
-            },
-        });
-    </script>
-    <!--
-    <script src="assets/api/apiconfig.js"></script>
-    -->
 </html>

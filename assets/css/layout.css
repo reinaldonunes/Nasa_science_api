@@ -1,10 +1,10 @@
 @import url("../css/default.css");
 @import url("../css/components.css");
 
-body{background:#0a0a0a url("../img/footer-background.jpg") no-repeat center bottom -300px;}
+body{background:#0a0a0a url("../img/astronaut-space-13-4k.jpg") no-repeat center center;background-size:cover;}
 
 /* HERO NASA */
-#heroNasa{padding:25px 25px 50px 25px;background:url("../img/universe-background-img.png") no-repeat center bottom;background-size:225%;}
+#heroNasa{padding:25px 25px 50px 25px;/*background:url("../img/universe-background-img.png") no-repeat left bottom;background-size:100%;*/}
 #heroNasa main{z-index:2;position:relative;}
 #heroNasa #logo-nasa{
     width:100%;
@@ -21,6 +21,11 @@ body{background:#0a0a0a url("../img/footer-background.jpg") no-repeat center bot
     display:flex;
     align-items: center;
     border-radius:10px;
+}
+#heroNasa iframe{
+    display:flex;
+    width:100% !important;
+    min-height:390px;
 }
 
 #heroNasa .description-hero{
@@ -54,7 +59,6 @@ body{background:#0a0a0a url("../img/footer-background.jpg") no-repeat center bot
 #heroNasa .description-hero span{
     display:flex;
     width:100%;
-    margin-bottom:25px;
     color:#fff;
     font-size:16px;
 }
@@ -84,7 +88,6 @@ body{background:#0a0a0a url("../img/footer-background.jpg") no-repeat center bot
     #heroNasa .description-hero{
         order:2;
         background:rgba(0,0,0,0.7);
-        margin-top:-175px;
         display:block;
     }
     #heroNasa .description-hero div{
@@ -101,8 +104,8 @@ body{background:#0a0a0a url("../img/footer-background.jpg") no-repeat center bot
     z-index:1;
     margin-top:-85px;
     padding:120px 25px 50px 25px; 
-    background:url("https://www.nasa.gov/sites/all/themes/custom/nasatwo/images/starfield-banner.jpg") repeat center center;
-    border-radius:15px 15px 0px 0px;
+    background:rgba(24,17,39,0.8);
+    /*background:url("https://www.nasa.gov/sites/all/themes/custom/nasatwo/images/starfield-banner.jpg") repeat center center;*/
 }
 #marsGallery h1{
     display:flex;
@@ -126,8 +129,12 @@ body{background:#0a0a0a url("../img/footer-background.jpg") no-repeat center bot
     min-height:250px;
     overflow: hidden;
 }
+#gallerySlider img{max-height:250px;}
 
 @media screen and (max-width:800px){
+    #marsGallery{
+        margin-top:0px;
+    }
     #marsGallery h1{
         font-size:22px;
     }
@@ -163,20 +170,24 @@ body{background:#0a0a0a url("../img/footer-background.jpg") no-repeat center bot
     width:100%;
     height:150px;
     border-radius:10px;
-    background:#151515;
+    background:rgba(3,3,3,0.6) url("../img/asteroid-icon.png") no-repeat left 25px center;
+    background-size:85px;
     display:flex;
     flex-direction:column;
-    text-align:center;
     justify-content: center;
+    padding-left:150px;
 
     transition-duration:0.2s;
 }
 #asteroidsNear .objects-list-grid article:hover{
-    background:#191919;
+    background-color:#191919;
 }
-#asteroidsNear .objects-list-grid article h6,
-#asteroidsNear .objects-list-grid article p{
-    color:#fff;
+#asteroidsNear .objects-list-grid article h3,
+#asteroidsNear .objects-list-grid article span{color:#fff;text-align:left;}
+#asteroidsNear .objects-list-grid article h3{
+    font-size:18px;
+    font-weight:bold;
+    text-align:left;
 }
 
 
